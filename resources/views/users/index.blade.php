@@ -29,7 +29,7 @@
                             <p class="text-sm uppercase tracking-[0.35em] text-white/90">Daftar Pengguna</p>
                             <h3 class="text-2xl font-semibold">Semua akun terdaftar</h3>
                         </div>
-                        <a href="{{ route('users.create') }}" class="inline-flex items-center justify-center rounded-full bg-[#fe941e] px-5 py-3 text-sm font-semibold text-blue transition hover:bg-[#fd593e]">
+                        <a href="{{ route('users.create') }}" class="self-end inline-flex items-center justify-center rounded-full bg-blue-500 px-5 py-3 text-sm font-semibold text-black shadow-lg transition duration-200 hover:bg-blue-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/70">
                             Tambah User
                         </a>
                     </div>
