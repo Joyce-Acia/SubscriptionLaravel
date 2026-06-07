@@ -29,7 +29,7 @@
                             <p class="text-sm uppercase tracking-[0.35em] text-white/90">Daftar Pengguna</p>
                             <h3 class="text-2xl font-semibold">Semua akun terdaftar</h3>
                         </div>
-                        <a href="{{ route('users.create') }}" class="inline-flex items-center justify-center rounded-full bg-[#fe941e] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#fd593e]">
+                        <a href="{{ route('users.create') }}" class="inline-flex items-center justify-center rounded-full bg-[#fe941e] px-5 py-3 text-sm font-semibold text-blue transition hover:bg-[#fd593e]">
                             Tambah User
                         </a>
                     </div>
@@ -55,7 +55,7 @@
                                         <td class="border px-4 py-2">{{ $user->email }}</td>
                                         <td class="border px-4 py-2">{{ $user->role }}</td>
                                         <td class="border px-4 py-2">
-                                            <a href="{{ route('users.edit', $user->id) }}" class="px-3 py-1 bg-yellow-500 text-white rounded hover:bg-yellow-600">
+                                            <a href="{{ route('users.edit', $user->id) }}" class="px-3 py-1 bg-[#f59e0b] text-black rounded hover:bg-yellow-600">
                                                 Edit
                                             </a>
                                             <form action="{{ route('users.destroy', $user->id) }}" method="POST" class="inline-block" onsubmit="return confirm('Yakin hapus user ini?')">
