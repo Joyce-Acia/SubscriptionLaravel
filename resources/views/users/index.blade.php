@@ -23,13 +23,13 @@
             @endif
 
             <div class="overflow-hidden rounded-[32px] border border-[#feaf52] bg-gradient-to-b from-[#fdf1cb] to-[#fef8ec] shadow-[0_25px_70px_rgba(253,89,62,0.12)]">
-                <div class="border-b border-[#fe914e]/30 bg-gradient-to-r from-[#fd593e] via-[#fe914e] to-[#feaf52] px-6 py-6 text-white">
+                <div class="border-b border-[#fe914e]/30 bg-gradient-to-r from-[#fd593e] via-[#fe914e] to-[#feaf52] px-6 py-6 text-black">
                     <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                         <div>
-                            <p class="text-sm uppercase tracking-[0.35em] text-white/90">Daftar Pengguna</p>
+                            <p class="text-sm uppercase tracking-[0.35em] text-black/90">Daftar Pengguna</p>
                             <h3 class="text-2xl font-semibold">Semua akun terdaftar</h3>
                         </div>
-                        <a href="{{ route('users.create') }}" class="self-end inline-flex items-center justify-center rounded-full bg-blue-500 px-5 py-3 text-sm font-semibold text-black shadow-lg transition duration-200 hover:bg-blue-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/70">
+                        <a href="{{ route('users.create') }}" class="self-end inline-flex items-right justify-right rounded-full bg-blue-500 px-5 py-3 text-sm font-semibold text-black shadow-lg transition duration-200 hover:bg-blue-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/70">
                             Tambah User
                         </a>
                     </div>

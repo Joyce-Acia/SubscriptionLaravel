@@ -11,24 +11,43 @@
                 </div>
 
                 <!-- Navigation Links -->
-                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                <!-- Navigation Links -->
+                @auth
+                    @if(Auth::user()->role === 'user')
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex text-center">
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
+                        {{ __('Home') }}
                     </x-nav-link>
                 </div>
-                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('users.index')" :active="request()->routeIs('users.*')">
-                        {{ __('Manajemen Pengguna') }}
-                    </x-nav-link>
-                </div>
-
-                                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex text-center">
                     <x-nav-link :href="route('plans')" :active="request()->routeIs('plans')">
                         {{ __('Plans') }}
                     </x-nav-link>
                 </div>
-            </div>
+                    @endif
+                @endauth
+                
+                @auth
+                    @if(Auth::user()->role === 'admin')
+                    <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex text-center">
+                        <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                            {{ __('Home') }}
+                        </x-nav-link>
+                    </div>
+                    <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex text-center">
+                        <x-nav-link :href="route('users.index')" :active="request()->routeIs('users. *')">
+                            {{ __('Manajemen Pengguna') }}
+                        </x-nav-link>
+                    </div>
 
+                    <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex text-center">
+                        <x-nav-link :href="route('admin.subscription-report')" :active="request()->routeIs('admin.subscription-report. *')">
+                            {{ __('Subscription Report') }}
+                        </x-nav-link>
+                    </div>
+                    @endif
+                @endauth
+            </div>
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center sm:ms-6">
                 <x-dropdown align="right" width="48">

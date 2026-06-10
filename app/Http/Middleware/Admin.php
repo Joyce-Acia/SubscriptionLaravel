@@ -19,6 +19,6 @@ class Admin
             return $next($request);
         }
 
-        return abort(403, 'Unauthorized access');
+        return redirect('/');
     }
 }

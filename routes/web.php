@@ -12,9 +12,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-    Route::get('/dashboard', [AdminSubscriptionReportController::class, 'index'])
-        ->middleware(['auth', 'verified'])
-        ->name('dashboard');
+        Route::get('/dashboard', function () {
+            return view('dashboard');
+        })->middleware(['auth'])->name('dashboard');
         
     Route::get('/plans', [SubscriptionController::class, 'plans'])
         ->middleware(['auth', 'verified'])
@@ -41,7 +41,7 @@ Route::middleware(['auth'])->group(function () {
         Route::resource('users', UserController::class)->except(['show']);
       
         Route::get('/admin/subscription-report', [AdminSubscriptionReportController::class, 'index'])
-        ->name('admin.subscription-report');
+            ->name('admin.subscription-report');
 
 });
 
