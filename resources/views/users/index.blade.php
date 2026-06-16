@@ -29,8 +29,8 @@
                             <p class="text-sm uppercase tracking-[0.35em] text-black/90">Daftar Pengguna</p>
                             <h3 class="text-2xl font-semibold">Semua akun terdaftar</h3>
                         </div>
-                        <a href="{{ route('users.create') }}" class="self-end inline-flex items-right justify-right rounded-full bg-blue-500 px-5 py-3 text-sm font-semibold text-black shadow-lg transition duration-200 hover:bg-blue-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/70">
-                            Tambah User
+                        <a href="{{ route('users.create') }}" class="self-end inline-flex items-right justify-right rounded-full bg-blue-500 px-5 py-3 text-sm font-semibold text-white shadow-lg transition duration-200 hover:bg-blue-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/70">
+                           + Tambah User
                         </a>
                     </div>
                 </div>
@@ -55,7 +55,7 @@
                                         <td class="border px-4 py-2">{{ $user->email }}</td>
                                         <td class="border px-4 py-2">{{ $user->role }}</td>
                                         <td class="border px-4 py-2">
-                                            <a href="{{ route('users.edit', $user->id) }}" class="px-3 py-1 bg-[#f59e0b] text-black rounded hover:bg-yellow-600">
+                                            <a href="{{ route('users.edit', $user->id) }}" class="px-3 py-1 bg-[#f59e0b] text-white rounded hover:bg-yellow-700">
                                                 Edit
                                             </a>
                                             <form action="{{ route('users.destroy', $user->id) }}" method="POST" class="inline-block" onsubmit="return confirm('Yakin hapus user ini?')">
